@@ -11,6 +11,9 @@ COLORS:
 light tan: #eeebda
 
 */
+/** {
+  border: 1px solid red;
+}*/
 body{
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
@@ -18,6 +21,9 @@ body{
     background-color: #eeebda;
     display: flex;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1, h2, h3{
     font-family: "Josefin Sans", sans-serif;
@@ -31,7 +37,9 @@ img{
 }
 .wrapper{
     width: 1000px;
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     /*
         TODO:
         - Center up the page
@@ -40,7 +48,8 @@ img{
     */
 }
 #site-header{
-
+  /*display: block;*/
+  /*justify-content: center;*/
     /*
         TODO
         - Flexbox property here
@@ -50,13 +59,12 @@ img{
     text-align: center;
     padding: 60px 0 120px 0;
     font-size: 4em;
-
     /*
         TODO:
         - Add a background image "header-img.jpg"
         make sure that the path to the image is correct
     */
-
+    background-image: url(../ibeer_starter_files/img/header-img.jpg);
     background-size: cover;
     background-position: right bottom;
 }
@@ -73,6 +81,7 @@ img{
     color: white;
     bottom: 20px;
     text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
+    font-family: 'Dancing Script';
     /*
         TODO:
         - Use the script font: 'Dancing Script' fot this text
@@ -80,7 +89,8 @@ img{
 }
 #main-navigation{
     background: #444;
-
+    display: flex;
+    justify-content: flex-end;
     /*
         TODO:
         - Use Flexbox to arrange the navigation links
@@ -92,7 +102,7 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
-
+    margin: 15px;
     /*
         TODO:
         - Flexbox - Create general spacing between nav links
@@ -100,7 +110,8 @@ img{
 }
 #main-navigation #logo{
     margin-right: 400px;
-
+    /*display: flex;*/
+    /*padding-left: 50px;*/
     /*
         TODO:
         - Flexbox - The logo needs to take up more space
@@ -111,6 +122,10 @@ main{
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    display: block;
+    flex-flow: column wrap;
+    width: 60%;
+    position: relative;
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -121,6 +136,10 @@ aside{
     padding: 20px;
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    width: 20%;
+    /*display: flex;*/
+
+    /*position: absolute;*/
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -140,7 +159,7 @@ aside img{
 }
 article{
     background-color: white;
-    box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3);
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -161,6 +180,11 @@ article time{
     color: #666;
 }
 article img{
+    float: right;
+    width: 350px;
+    height: 250px;
+    margin-top: 20px;
+    /*margin-top: 30px;*/
     /*
         TODO:
         - Float article images to the right
@@ -168,17 +192,26 @@ article img{
     */
 }
 article footer p{
+    text-align: center;
+    text-transform: uppercase;
     /*
         TODO:
         - Style the article footer
         HINT: Look to the article header;
     */
 }
-#site-footer{
-
+#site-header{
+    color: white;
     background: #333;
     /*
         TODO:
         - Style the site footer
     */
+}
+#site-footer {
+  color: white;
+  background: #333;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
